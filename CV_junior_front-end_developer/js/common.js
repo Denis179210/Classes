@@ -1,74 +1,72 @@
-$(function() {
+	var slide = document.querySelector('#from');
 
+	var contacts = document.querySelector('address').children;
+	console.log(contacts);
 
-	
-	
-	/*
-	let promise = new Promise(function(resolve, reject) {
-		setTimeout(function() { 
-			let age = +prompt("Your age?");
-			 	age >= 18 ? resolve(age) : reject(`${age} is less than need`);
-		}, 5000);
-    	
-	});
-	console.info(promise);
-	promise.then( age => {
-		setTimeout(function() {
-		console.info(promise);
-		alert(age)}, 5000)
-	})
-	//promise.catch( age => alert(age));
-	console.log("hi");
-	console.log("hi");
-	console.log("hi");
-	console.log("hi");
-	console.log("hi"); */
-	/*
-	function arrGen(n) {
-		var arr = [];
-		for(var i = 0; i < n; i++) {
-			arr.push(Math.floor(Math.random() * n))
-		}
-		return arr
+	var contArray = [];
+	for( var i = 0; i < contacts.length; i++) {
+		contArray.push(contacts[i])
+	}
+	console.log(contArray);
+	var modContArr = contArray.map(getCoords);
+
+	function deformator(item) {
+		return Math.round(item.top)
 	}
 
-	function bubbleSort(arr) {
-		for( var j = 0; j < arr.length; j++) {
-			for( var i = 0; i < arr.length; i++) {
-				if( arr[i] > arr[i + 1] ) {
-					buf = arr[i];
-					arr[i] = arr[i + 1];
-					arr[++i] = buf;
-				}
-			}
+	modContArr = modContArr.map(deformator);
+	console.log(modContArr);
+
+
+
+
+
+
+
+
+	var copy = Math.round(getCoords(slide).top);
+
+	function getCoords(elem) { // кроме IE8-
+			var box = elem.getBoundingClientRect();
+
+		return {
+		    top: box.top + pageYOffset,
+		    left: box.left + pageXOffset
 		}
-		return arr
-	}
+ 	 };
+	////////////////////////////////////////////////
 
-	var randArr = arrGen(100000);
+	window.addEventListener("scroll", handler);
 
-	console.info(randArr)
-
-	let sort = new Promise(function(resolve, reject) {
+	function handler() {
+		var windowHeight = document.documentElement.scrollTop + window.innerHeight; //
+		var coords= document.querySelector(".windowHeight ");						//	
+		coords.innerHTML = windowHeight;											// Скролл Window
+		console.log(coords.textContent);											//
 		
-		var start = new Date();
+		var ElemTop = document.querySelector(".coordsElem");
+		ElemTop.innerHTML = copy;
+		if(windowHeight > copy) {
+			slide.setAttribute("class", "from_leftside" );
+		}
+		/*
+		function getHTML(item) {
+			return item.innerHTML = contacts[item]
+		}
+		var loop = contArray.map(getHTML);
+		console.log(loop);
+		*/
+	}
 
-		var show = bubbleSort(randArr);
+/*
 
-		var end = new Date();
-		var timeMin = parseInt(( (end - start) / 1000 / 60 ) + "");
-		var timeSec = parseInt(( (end - start) / 1000 % 60 ) + "");
-		var time = timeMin + " : " + timeSec;
-		console.log(show);
-		resolve(time)
+	
 
-	});
-	sort.then(alert(time))
-	console.info("We can  to continue to do something ");
-	console.info("We can  to continue to do something ");
-	console.info("We can  to continue to do something ");
-	console.info("We can  to continue to do something ");
+	
+	
+	/////////////////////////////////////////////////////
+	var winHgt= document.querySelector(".windowHeight ");
+	console.log(winHgt);
+	winHgt.textContent = windowHeight;
+
 	*/
-
-});
-
