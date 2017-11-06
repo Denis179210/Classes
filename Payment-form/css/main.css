@@ -1,0 +1,123 @@
+.b-body {
+  height: 100vh;
+  background: url(../img/body-bg.png) no-repeat;
+  background-position: right 0;
+  -webkit-background-size: 40%;
+  -o-background-size: 40%;
+  background-size: 40%;
+  font: 12px/1.5 "Montserrat", sans-serif;
+  color: #61726E; }
+
+.l-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #808080 60%, transparent 100%) 100% 100%;
+  display: flex;
+  -webkit-align-content: center;
+  align-content: center; }
+
+.b-payment-form {
+  width: 360px;
+  height: 545px;
+  background-color: #FFF;
+  margin: auto; }
+
+.b-heading {
+  height: 15%;
+  background-color: #eee4a9;
+  padding: 0 25px 0 25px;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+    -webkit-justify-content-justify-content: space-between;
+  line-height: 1.1; }
+
+.e-heading_buyer-name {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1.2em; }
+
+.e-heading_buyer-total {
+  text-transform: uppercase; }
+
+.e-heading_price {
+  font-size: 2.7em; }
+
+.b-main-part {
+  padding: 0 25px 0 25px;
+  text-align: justify; }
+
+.b-card-number {
+  display: inline-block; }
+
+.m-card-number__size {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.b-expiration-date {
+  display: inline-block;
+  margin-top: 30px; }
+
+.e-main-part_item {
+  display: inline-block;
+  margin-top: 30px; }
+
+.m-main-part_item__size-L {
+  width: 100%; }
+
+.m-main-part_item__size-M {
+  width: 60%; }
+
+.m-main-part_item__size-S {
+  width: 30%; }
+
+.b-card-number {
+  margin-top: 7px;
+  padding-left: 10px;
+  height: 40px; }
+
+.b-select-mounth {
+  margin-top: 7px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 40px;
+  padding-left: 10px;
+  background: url(../img/arrow.png) no-repeat 90%; }
+
+.b-select-year {
+  margin-top: 7px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 40px;
+  padding-left: 10px;
+  background: url(../img/arrow.png) no-repeat 90%; }
+
+.b-cvv {
+  margin-top: 7px;
+  padding-left: 10px;
+  height: 40px; }
+
+.e-cvv_example {
+  display: inline-block;
+  text-align: left;
+  padding-left: 10px; }
+
+.b-submit {
+  width: 100%;
+  height: 40px;
+  font-size: 1.5em; }
+
+.b-submit:hover {
+  background: #25b167;
+  color: #fff;
+  border: none;
+  cursor: pointer; }
+
+.e-payment-form_cancel-order {
+  text-align: center;
+  text-decoration: underline; }
