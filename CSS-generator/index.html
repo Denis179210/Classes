@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>HTML template</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+</head>
+<body>
+	<div class="storage">
+		<div><input type="text" class="input"><button class="add_link">Add link</button></div>
+		
+		<ul class="links">
+		</ul>
+		<div class="radiogroup">
+			<input type="radio" name="choise" value="one">one
+			<input type="radio" name="choise" value="two">two
+			<input type="radio" name="choise" value="three">three
+			<button class="checking">Check elements</button>
+		</div>
+		<select name="" id="" class="select">
+			<option value="1">one</option>
+			<option value="2">two</option>
+			<option value="3">three</option>
+		</select>
+		<div class="range">
+			<input type="range" value="40" min="40" max="500" step="1">
+			<div class="value"></div>
+		</div>
+
+		<div class="radius">
+			<div class="radius_inset_wrap">
+				<div class="units">
+					<p>Units</p>
+					<p>
+						<label>
+							<input type="radio" value="percent" name="units"> %
+						</label>
+						<label>
+							<input type="radio" value="px" name="units"> px	
+						</label>
+						
+					</p>
+				</div>
+				<div class="tumbls">
+					<p><span>верхний левый : </span><input disabled class="range-panel top-left" type="range" min="0" max="300" step="1" value="0"><br></p>
+					<p><span>верхний правый : </span><input disabled class="range-panel top-right" type="range" min="0" max="300" step="1" value="0"><br></p>
+					<p><span>нижний правый : </span><input disabled class="range-panel bottom-right" type="range" min="0" max="300" step="1" value="0"><br></p>
+					<p><span>нижний левый : </span><input disabled class="range-panel bottom-left" type="range" min="0" max="300" step="1" value="0"><br></p>
+				</div>
+				<div class="screens">
+					<input value="0" type="text"><br>
+					<input value="0" type="text"><br>
+					<input value="0" type="text"><br>
+					<input value="0" type="text"><br>
+				</div>
+				
+			</div>
+			<div class="applied-wrap">
+				<div class="width">
+					Ширина : <input class="widthSetter" type="range" min="0" max="700" value="300" step="1">
+					<input class="outWidth" type="text" value="300px" >
+				</div>
+				<div class="color-rgba">
+					<div>
+						R :<input class="controller" min="0" max="255"	value="34" step="1" type="range">
+								<input class="colorOut outR" value="0" type="text">
+					</div>
+					<div>
+						G :<input class="controller" min="0" max="255"	value="136" step="1" type="range">
+								<input class="colorOut outG" value="0" type="text">
+					</div>
+					<div>
+						B :<input class="controller" min="0" max="255"	value="212" step="1" type="range">
+								<input class="colorOut outB" value="0" type="text">
+					</div>
+					<div>
+						A :<input class="controller" min="0" max="1" value="1" step="0.1" type="range">
+								<input class="colorOut outAlpha" value="1" type="text">
+					</div>
+					<div>
+						<input class="RGBAresult" value="" type="text">
+					</div>
+				</div>
+				<div class="height">
+					Высота :<input class="heightSetter" type="range" min="0" max="500" value="100" step="1">
+					<input class="outHeight" type="text" value="100px">
+				</div>
+				<div class="scalen">
+					<div class="scalen-applied"> 
+						<div class="applied"></div>
+					</div>	
+				</div>
+					
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript" src="js/libs.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
