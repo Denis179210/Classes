@@ -67,14 +67,9 @@ $color_Default: #fff
 		@media screen and (max-width: 768px)
 			width: 100vw
 			height: auto
-			display: block
+			display: none
 			background: lighten($color_General, 10)
-			// width: 50vw
-			// height: 100vh
-			// right: 0
-			// display: block
-			// position: absolute
-			// background-image: linear-gradient(45deg, $color_General 50%, red 100%)\
+
 .small-logo
 	display: none
 	@media screen and (max-width: 768px)
@@ -119,7 +114,7 @@ $color_Default: #fff
 		display: inline 
 		visibility: hidden 		
 	&:checked + .nav_responsive
-		display: none
+		display: block
 
 
 .nav_item
