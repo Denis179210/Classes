@@ -8,7 +8,7 @@
       min-width: 768px; } }
   @media screen and (max-width: 768px) {
     .body {
-      min-width: 320px; } 
+      min-width: 300px; } 
   }
   .body_insert {
     box-sizing: border-box;
