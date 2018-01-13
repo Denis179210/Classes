@@ -3,7 +3,8 @@
   transition: all .2s ease; }
 
 .body {
-  font: 400 14px/1.5 'Open Sans', sans-serif; }
+  font: 400 14px/1.5 'Open Sans', sans-serif;
+  color: #898E96; }
 
 .header {
   min-width: 1366px;
@@ -25,15 +26,17 @@
     border: none;
     background-color: #19bd9a;
     background: #19BD9A url(../img/scroll_arrow.png) no-repeat center center;
-    margin-top: 215px; }
+    margin-top: 215px;
+    outline: none;
+    cursor: pointer; }
 
 .nav {
   cursor: default; }
   .nav_item {
-    font: 400 14px/2 'Open Sans';
+    font: 400 16px/2 'Open Sans';
     text-transform: capitalize;
     padding: 5px 14px;
-    border-radius: 50px;
+    border-radius: 17px;
     border: 1px solid transparent; }
     .nav_item:hover {
       border: 1px solid white;
@@ -50,10 +53,12 @@
   .heading_secondary {
     padding: 75px 0 15px 0;
     letter-spacing: 3px;
-    font: 300 20px/1.5 'Open Sans', sans-serif; }
+    font: 300 20px/1.5 "Source Sans Pro", sans-serif; }
 
 .title {
   text-align: center; }
+  .title_main {
+    font-size: 16px; }
   .title::first-letter {
     text-transform: capitalize; }
 
@@ -70,7 +75,8 @@
     font-size: 16px;
     line-height: 2.5;
     cursor: default;
-    border-bottom: 2px solid transparent; }
+    border-bottom: 2px solid transparent;
+    color: #333; }
     .tabs_tab:hover {
       cursor: pointer;
       border-bottom: 2px solid green; }
@@ -108,13 +114,81 @@
   font-size: 16px;
   padding: 5px 25px; }
 
+.the-team {
+  min-width: 1366px;
+  height: 775px; }
+
 .testimonials {
   min-width: 1366px;
   height: 650px;
   background-color: #F3F3F3; }
 
-.slider {
+.carosl {
   width: 1170px;
   height: 315px;
   background-color: #fff;
-  margin: 0 auto; }
+  margin: 60px auto;
+  padding-top: 55px; }
+  .carosl-dots-color {
+    color: #19bd9a; }
+  .carosl__team {
+    width: 1030px;
+    height: 500px; }
+  .carosl_inner {
+    display: flex !important; }
+  .carosl_image {
+    width: 30%; }
+    .carosl_image > img {
+      margin: 0 auto; }
+  .carosl_user {
+    width: 70%;
+    text-align: left; }
+    .carosl_user__team {
+      text-align: right;
+      padding-right: 50px;
+      background: linear-gradient(to right, #19bd9a 100%, transparent 0) no-repeat right 25px;
+      background-size: 4px 40px; }
+    .carosl_user-name {
+      color: #19bd9a;
+      font-weight: 700;
+      margin: 20px 0 0 0; }
+      .carosl_user-name__team {
+        text-align: right;
+        color: #000;
+        font-size: 20px; }
+    .carosl_user-office {
+      margin: 0; }
+      .carosl_user-office__team {
+        font-style: italic;
+        font-family: "Source Sans Pro", sans-serif;
+        text-transform: uppercase; }
+  .carosl_post {
+    padding-right: 150px;
+    font-size: 16px; }
+    .carosl_post__team {
+      text-align: right;
+      padding-right: 0;
+      font-size: 14px;
+      padding-left: 400px; }
+
+.contact-us {
+  min-width: 1366px;
+  height: 685px;
+  background-color: #FFF; }
+
+.map {
+  width: 100%;
+  height: 440px; }
+
+.footer {
+  text-align: center;
+  padding: 50px 0;
+  border-top: 1px solid black; }
+
+.footer_social {
+  text-align: center; }
+  .footer_social-icon {
+    text-decoration: none; }
+
+.mydots {
+  font-size: 24px; }
