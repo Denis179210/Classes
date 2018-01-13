@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #completed button {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>TODO list</h1>
+  <ul id="list">
+
+  </ul>
+  <h2>Completed</h2>
+  <ul id="completed">
+    
+  </ul>
+  <button id="add">Add to list</button>
+  <script id="listItem">
+    <li>
+      <input class="_checkbox" type="checkbox">
+      <span>{{text}}</span>
+      <button class="_edit">edit</button>
+      <button class="_delete">delete</button>
+    </li>
+  </script>
+  <script id="listItemEdit">
+    <li>
+      <input type="text" value="{{text}}"> 
+      <button class="_save">save</button>
+    </li>
+  </script>
+  <script>
+    //listItem = document.querySelector('#listItem');
+
+    // templates declaration
+    var tplListItem = listItem.innerHTML;
+    var tplListItemEdit = listItemEdit.innerHTML;
+
+    // add event listeners on click
+    list.addEventListener('click', onListClick);
+    completed.addEventListener('click', onCompleteClick);
+    add.onclick = addNewItem;
+
+    addNewItem();
+
+    function onCompleteClick(event) {
+      var target = event.target;
+
+      if (target.className === '_checkbox') {
+        var html = target.parentElement.outerHTML;
+        onDeleteClick(target);
+        list.innerHTML += html;
+      }
+    }
+
+    function onListClick(event) {
+      var target = event.target;
+
+      switch (target.className) {
+        case '_save':
+          onSaveClick(target);
+          break;
+        case '_edit':
+          onEditClick(target);
+          break;
+        case '_delete':
+          onDeleteClick(target);
+          break;
+        case '_checkbox':
+          onCheckboxClick(target);
+          break;
+      }
+    }
+
+    function onSaveClick(target) {
+      var li = target.parentElement;
+      var text = target.previousElementSibling.value;
+      li.outerHTML = tplListItem.replace(/{{text}}/i, text);
+    }
+
+    function onEditClick(target) {
+      var li = target.parentElement;
+      var text = target.previousElementSibling.innerText;
+      li.outerHTML = tplListItemEdit.replace(/{{text}}/i, text);
+    }
+
+    function onDeleteClick(target) {
+      var li = target.parentElement;
+      li.remove();
+    }
+
+    function addNewItem() {
+      list.innerHTML += tplListItemEdit.replace(/{{text}}/i, '');
+    }
+
+    function onCheckboxClick(target) {
+      var html = target.parentElement.outerHTML;
+      onDeleteClick(target);
+      completed.innerHTML += html;
+    }
+
+  </script>
+</body>
+</html>

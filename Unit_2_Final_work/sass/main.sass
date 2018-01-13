@@ -1,0 +1,131 @@
+*
+	box-sizing: border-box
+	transition: all .2s ease 
+
+$font_heading : 'Source Sans Pro', sans-serif
+
+
+.body 
+	font: 400 14px/1.5 'Open Sans', sans-serif
+	
+
+.header 
+	min-width: 1366px
+	height: 737px
+	background: url(../img/bg-header.jpg) no-repeat
+	background-size: cover
+	color: white
+	&_inner 
+		padding: 40px 100px 0 100px 
+		text-align: center
+	&_navbar 
+		display: flex
+		justify-content: space-between
+	&_scroll 
+		height: 35px
+		width: 35px
+		border-radius: 100px
+		appearance: none 
+		border: none 
+		background-color: #19bd9a
+		background: #19BD9A url(../img/scroll_arrow.png) no-repeat center center 
+		margin-top: 215px 
+	
+.nav 
+	cursor: default 
+	&_item
+		font: 400 14px/2 'Open Sans'
+		text-transform: capitalize
+		padding: 5px 14px
+		border-radius: 50px
+		border: 1px solid transparent
+		&:hover 
+			border: 1px solid white
+			cursor: pointer
+
+.heading 
+	margin: 0
+	text-align: center
+	text-transform: uppercase
+	&_main
+		font: 300 35px/2 $font_heading
+		letter-spacing: 6px 
+		margin-top: 200px
+	&_secondary 
+		padding: 75px 0 15px 0
+		letter-spacing: 3px
+		font: 300 20px/1.5 'Open Sans', sans-serif
+	
+.title 
+	text-align: center
+	&::first-letter
+		text-transform: capitalize
+		
+
+.portfolio
+	min-width: 1366px
+	min-height: 1405px 
+	background-color: #F3F3F3 
+.tabs 
+	text-align: center
+	// margin-bottom: 100px
+	&_tab 
+		padding: 0 10px
+		text-transform: capitalize
+		font-size: 16px
+		line-height: 2.5
+		cursor: default
+		border-bottom: 2px solid transparent
+		&:hover 
+			cursor: pointer
+			border-bottom: 2px solid green
+		
+	
+
+
+.gallery
+	width: 1120px
+	margin: 0 auto 
+	// background-color: red 
+.pictures
+	width: 100% 
+	text-align: center
+	&_item
+		width: 24%
+		display: inline-block
+		// & > img
+		// 	display: inline-block
+		// 	width: 100% 
+		// 	height: 100% 
+
+.lets-talk 
+	min-width: 1366px
+	height: 200px
+	background: url(../img/lets_talk.jpg) no-repeat
+	background-size: cover
+	text-align: center
+	color: #FFF 
+	font-size: 20px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+.button
+	border: 1px solid #fff
+	border-radius: 100px
+	// margin-top: 20px
+	appearance: none
+	background: transparent
+	color: #FFF 
+	font-size: 16px
+	padding: 5px 25px  
+
+.testimonials
+	min-width: 1366px 
+	height: 650px
+	background-color: #F3F3F3 
+.slider
+	width: 1170px
+	height: 315px
+	background-color: #fff
+	margin: 0 auto
