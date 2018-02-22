@@ -11,7 +11,9 @@
 .header {
   height: 760px;
   width: 100%;
-  background: url(../img/bg-header.jpg);
+  background-image: url(../img/bg-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff; }
   .header_inner {
     width: 1110px;
@@ -140,7 +142,9 @@
 .explore {
   width: 100%;
   height: 1020px;
-  background-image: url(../img/bg-explore.png); }
+  background-image: url(../img/bg-explore.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
   .explore_inner {
     width: 1110px;
     height: 100%;
@@ -208,7 +212,9 @@
 .places-first {
   width: 100%;
   height: 700px;
-  background: url(../img/bg-places-first-place.jpg); }
+  background-image: url(../img/bg-places-first-place.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;}
   .places-first_inner {
     width: 1110px;
     margin: 0 auto;
@@ -217,7 +223,9 @@
 .places-second {
   width: 100%;
   height: 700px;
-  background: url(../img/bg-places-second-place.jpg); }
+  background-image: url(../img/bg-places-second-place.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;}
   .places-second_inner {
     width: 1110px;
     margin: 0 auto;
@@ -251,7 +259,9 @@
 .reviews {
   width: 100%;
   height: 730px;
-  background: url(../img/bg-reviews.png); }
+  background-image: url(../img/bg-reviews.png);
+  background-repeat: no-repeat;
+  background-size: cover; }
   .reviews_inner {
     width: 1110px;
     height: 100%;
